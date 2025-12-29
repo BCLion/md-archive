@@ -1,0 +1,17 @@
+### LEGAL REASONING TRACE
+JURISDICTIONAL SCRUTINY: This proceeding sits in the BC Provincial Court but operates as a variation application of a Final Order. Judge Doulis is reviewing his own 2021 decision. The legal standard is rigorous; varying a final order requires surmounting the high threshold of Gordon v. Goertz. The BCPC jurisdiction here focuses intensely on the factual determination of whether the "material change" threshold has been met, rather than re-trying the merits of the original custody dispute.
+
+STATUTORY SUBSUMPTION: The application is governed strictly by FLA s. 47. The Father must prove: (1) a change in conditions/needs of the child; (2) which materially affects the child; and (3) which was not foreseen. The analysis is constrained by s. 37 (Best Interests) and s. 202 (Child's Evidence). The child's severe disabilities (FASD, Global Developmental Delay) amplify the importance of the "stability" factor under s. 37(2)(e) and s. 37(3).
+
+PRECEDENTIAL ALIGNMENT: The judge correctly applies the trilogy of Gordon v. Goertz (SCC), Williamson v. Williamson (BCCA), and Callaghan v. Charbonneau (BCCA). He explicitly rejects the Father's attempt to use a "review" clause in the previous order as a mechanism to bypass the Gordon test, noting such a clause was not intended to retry the relocation issue. The Judge also aligns with J.E.S.D. v. Y.E.P. regarding the weight of a special needs child's views, finding that cognitive disabilities diminish the weight of their expressed preferences.
+
+ARGUMENT STRENGTH: The Father fails because his evidence amounts to mere dissatisfaction with the Mother's employment status and minor childcare logistics (e.g., bus stops). These do not constitute a material change altering the child's needs in a fundamental way. The Mother prevails by demonstrating that the child is "thriving" with established therapeutic and educational supports in the new location. For a child with complex neurodevelopmental disorders, the "status quo" of established specialized care is a formidable doctrine.
+
+JUDICIAL SENTIMENT: The Judge displays pragmatic frustration with the Father's litigation strategy, noting the Father "did not intend the term as an opportunity to retry the relocation issue." He also criticizes the Father's failure to pay child support, directly linking this financial delinquency to the Mother's inability to afford winter tires, thereby necessitating a change to the transition order.
+
+IRAC/CoT SYNTHESIS:
+
+Issue: Whether the Father has met the onus of proving a material change in circumstances to vary the Final Relocation Order.
+Rule: Under FLA s. 47 and Gordon v. Goertz, a final order can only be varied if there is a material change that was not foreseen and which fundamentally affects the child. Gordon prevents an application from being an indirect appeal.
+Application: The Father cites Mother's job change (ABA therapist to cleaner) and reliance on family for childcare as the "change." Judge Doulis finds these insufficient. Employment changes are foreseeable. The child is settled, happy, and receiving necessary therapy in the current location. Moving her back would be destabilizing, not restorative. The child's views preferring the "holiday" parent are discounted due to her disability and lack of professional interviewing.
+Conclusion: No material change found. Application dismissed. Status quo maintained. A pragmatic variation to transition logistics is granted to facilitate parenting time, offsetting the Father's failure to pay support.
