@@ -1,0 +1,28 @@
+### LEGAL REASONING TRACE
+JURISDICTIONAL SCRUTINY: This is a complex BC Supreme Court (BCSC) trial involving high-net-worth individuals, an autistic child, and intricate corporate structures. The judgment is exhaustive (200+ paragraphs), reflecting the court's role as the "upper tier" for detailed fact-finding and legal analysis. The decision navigates the intersection of the Family Relations Act (FRA) and the Divorce Act, applying sophisticated asset division doctrines (reapportionment) and support guidelines for high-income earners.
+
+STATUTORY SUBSUMPTION:Guardianship (Divorce Act s. 16/FLA s. 37): The Court denies the Father's bid for equal parenting. The "best interests" analysis (s. 16(8), s. 37(2)) is heavily weighted by the child's autism and the Mother's historical role as the primary manager of his complex therapeutic needs. The "maximum contact" principle (s. 16(10)) is explicitly not treated as a presumption in favour of equal time.
+Reapportionment (FRA s. 65): The Court applies the "basket clause" (s. 65(1)(f)) to achieve fairness. The Mother receives a 65% share of the matrimonial home, acknowledging her career sacrifice and the Father's high earning trajectory (stemming from that sacrifice).
+Child Support (Guidelines s. 3, s. 17, s. 19): The Court imputes income to the Father at $1 million/year. This utilizes s. 17(1) (pattern of income) and s. 19 (imputing income) to ensure the "table amount" is not rendered useless or unfair given the massive asset disparity. It rejects "double dipping" arguments.
+
+PRECEDENTIAL ALIGNMENT: The Court correctly aligns with SCC and BCCA jurisprudence:
+Gordon v. Goertz: Applied strictly in the context of the "material change" argument (though here, the issue was variation of interim orders, so the threshold was lower, but the Gordon principles of "fresh inquiry" into best interests were followed).
+Moge v. Moge (SCC): Cited extensively regarding the economic consequences of homemaking and the "long-term" disadvantages of leaving the workforce (loss of seniority, skills, pension).
+Stein v. Stein (SCC): Applied to divide the contingent tax liability (75% Father/25% Mother) despite it being a corporate debt, piercing the corporate veil to ensure fairness in asset division.
+Leskunat v. Leskunat: Used to define "means" broadly for support purposes.
+
+ARGUMENT STRENGTH:Mother's Victory: Prevails due to the "sacrifice doctrine." Her history as the primary caregiver for an autistic child, which enabled the Father to build a high-earning career, triggers a significant reapportionment of assets (65% of the home) and indefinite spousal support. Her specific knowledge of the child's therapy and routine makes her the essential decision-maker.
+Father's Defeat: Failed to secure equal parenting because he cannot yet "replicate" the Mother's role. His past extensive travel and reliance on nannies undermined his argument for immediate 50/50 sharing. His financial arguments, while technically grounded in Guidelines (s. 2(3) "most current info"), were deemed an attempt to "double dip" (use low income for support but keep high assets built with past high income).
+JUDICIAL SENTIMENT: The Judge displays frustration with the Father's lack of full disclosure regarding his 2011 income ($3.4 million vs. reported $661k). While stopping short of calling it "blameworthy" (which would trigger retroactive support), the Judge notes the "incomplete or misleading" nature of the financial statement. The Judge also dismisses the Father's girlfriend's evidence (Ms. A.) due to her bias and personal benefits from the arrangement.
+
+IRAC/CoT SYNTHESIS:
+Issue: (1) What is the appropriate parenting schedule given the child's autism and Father's availability? (2) Should family assets be reapportioned to account for career sacrifice? (3) What is the Father's income for support?
+Rule:
+Parenting: Best interests of the child (s. 16(8), with focus on stability, routine, and historical caregiving roles.
+Assets: Reapportionment is permitted if equal division is unfair (s. 65), considering factors like length of marriage, career sacrifice (Lodge), and earning disparity (Moge). Corporate veils can be pierced for family debts (Stein).
+Support: Income is determined to ensure children benefit from parents' means. Courts may impute income (s. 19) if fluctuations or "unrealistic" current income doesn't reflect reality.
+Application:
+Parenting: Father seeks 50/50 time. Judge agrees he is a good parent but acknowledges Mother is the "expert" on B.'s autism. Equal time now would be "too much, too soon." The Judge moves from the Mother's proposal (minimal Dad time) to a middle ground (3 weeks Mother/1 week Father).
+Assets: Mother seeks 65% of the home. Judge agrees. The "Lodge" factors apply: she sacrificed career, is older with dated skills, and has the ongoing burden of the special needs child. The Father's ability to earn millions is directly linked to her sacrifice. The tax debt is split 75/25 to account for the high-earner status.
+Support: Father argues 2012 income ($688k) should govern support. Judge imputes $1 million. A strict 2012 calculation would let the Father "double dip" (live poor on paper while rich on assets). The Guidelines aim to share the means, not just current cash flow.
+Conclusion: Mother gets primary residence, final decision-making, 65% asset split, and support based on $1M income. Father gets generous parenting time (1 week/month), 50% of remaining assets, and protection from retroactive claims.
