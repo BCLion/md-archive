@@ -1,0 +1,142 @@
+-- AI_Bridge v16: The "Final Texture Fix" Edition
+local HttpService = game:GetService("HttpService")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local TweenService = game:GetService("TweenService")
+local ContentProvider = game:GetService("ContentProvider")
+
+-- 1. CONFIGURATION
+local CLOUD_URL = "https://olivia-decadal-preciously.ngrok-free.dev/temple_update"
+local lastSpawnedID = "" 
+
+local MasterVoiceEvent = ReplicatedStorage:FindFirstChild("MasterVoiceEvent") or Instance.new("RemoteEvent")
+MasterVoiceEvent.Name = "MasterVoiceEvent"
+MasterVoiceEvent.Parent = ReplicatedStorage
+
+-- 2. ZONE DETECTION LOGIC
+local function getZone(rootPart)
+	local pos = rootPart.Position
+	if pos.X > 200 then
+		return "Western_Town"
+	elseif pos.X < -200 then
+		return "Haunted_Mansion"
+	else
+		return "Angkor_Wat"
+	end
+end
+
+-- 3. THE MAIN CORE FUNCTION
+local function sendGameUpdate()
+	local players = game.Players:GetPlayers()
+	local targetPlayer = players[1] 
+
+	if not targetPlayer or not targetPlayer.Character then return end
+
+	local char = targetPlayer.Character
+	local root = char:FindFirstChild("HumanoidRootPart")
+	local hum = char:FindFirstChild("Humanoid")
+
+	if not root or not hum then return end
+
+	local currentZone = getZone(root)
+
+	local worldState = {
+		player_name = targetPlayer.Name,
+		health = math.floor(hum.Health),
+		zone = currentZone,
+		position = tostring(root.Position)
+	}
+
+	local success, response = pcall(function()
+		return HttpService:PostAsync(
+			CLOUD_URL, 
+			HttpService:JSONEncode(worldState), 
+			Enum.HttpContentType.ApplicationJson
+		)
+	end)
+
+	if success then
+		local decodeSuccess, data = pcall(function() return HttpService:JSONDecode(response) end)
+		if not decodeSuccess or not data then return end
+
+		-- A. LIGHTING & AMBIENT TRIGGERS
+		if data.environment_trigger == "RED_ALERT" then
+			game.Lighting.Ambient = Color3.fromRGB(255, 0, 0)
+		else
+			if currentZone == "Western_Town" then
+				game.Lighting.Ambient = Color3.fromRGB(200, 150, 50)
+			elseif currentZone == "Haunted_Mansion" then
+				game.Lighting.Ambient = Color3.fromRGB(50, 0, 50)
+			else
+				game.Lighting.Ambient = Color3.fromRGB(0, 255, 255)
+			end
+		end
+
+		-- B. ASSET MANIFESTATION LOGIC
+		local spawnOrder = tostring(data.spawn_enemy or "")
+		if spawnOrder ~= "" and spawnOrder ~= lastSpawnedID then
+			lastSpawnedID = spawnOrder
+
+			for _, v in pairs(workspace:GetChildren()) do
+				if v.Name == "Summoned_Artifact" or v.Name == "Cyber_Monkey" then v:Destroy() end
+			end
+
+			local numericID = spawnOrder:match("%d+") 
+
+			if numericID then
+				local p = Instance.new("Part", workspace)
+				p.Name = "Summoned_Artifact"
+				p.Size = Vector3.new(4, 6, 0.1)
+				p.CFrame = root.CFrame * CFrame.new(0, 2, -12)
+				p.Anchored = true
+				p.CanCollide = false
+				p.Material = Enum.Material.Neon
+				p.Transparency = 1 
+
+				-- THE ULTIMATE RESOLVER: InsertService
+				-- This force-converts Decal IDs into Image IDs
+				task.spawn(function()
+					local success, result = pcall(function()
+						return game:GetService("InsertService"):LoadAsset(tonumber(numericID))
+					end)
+
+					local finalTexture = "rbxassetid://" .. numericID -- Fallback
+					if success and result:FindFirstChildWhichIsA("Decal") then
+						finalTexture = result:FindFirstChildWhichIsA("Decal").Texture
+						print("[RESOLVED] Found Image ID: " .. finalTexture)
+					end
+					result:Destroy() -- Clean up the temporary folder
+
+					local dFront = Instance.new("Decal", p)
+					dFront.Texture = finalTexture
+					dFront.Face = Enum.NormalId.Front
+					dFront.Transparency = 1
+
+					local dBack = dFront:Clone()
+					dBack.Face = Enum.NormalId.Back
+					dBack.Parent = p
+
+					-- Fade everything in
+					local info = TweenInfo.new(1.5)
+					TweenService:Create(p, info, {Transparency = 0.5}):Play()
+					TweenService:Create(dFront, info, {Transparency = 0}):Play()
+					TweenService:Create(dBack, info, {Transparency = 0}):Play()
+				end)
+			elseif spawnOrder == "Cyber_Monkey" then
+				-- ... (Keep your monkey code)
+			end
+		end
+
+
+		-- C. TRIGGER TYPEWRITER UI
+		if data.master_voice then
+			MasterVoiceEvent:FireAllClients(data.master_voice, currentZone)
+		end
+	else
+		warn("BRIDGE FAILED: Check Kaggle Tunnel/URL")
+	end
+end
+
+while true do
+	sendGameUpdate()
+	task.wait(5)
+end
